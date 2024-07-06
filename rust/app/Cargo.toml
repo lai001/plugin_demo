@@ -1,0 +1,16 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libloading = "0.8.4"
+anyhow = "1.0.86"
+plugin = { path = "../plugin" }
+engine = { path = "../engine" }
+
+[features]
+enable_ffi = ["plugin/enable_ffi"]
+default = ["enable_ffi"]

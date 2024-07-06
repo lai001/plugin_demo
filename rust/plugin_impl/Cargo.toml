@@ -1,0 +1,17 @@
+[package]
+name = "plugin_impl"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+enable_ffi = ["plugin/enable_ffi"]
+default = ["enable_ffi"]
+
+[dependencies]
+# engine = { path = "../engine" }
+plugin = { path = "../plugin" }
+
+[lib]
+crate-type = ["cdylib"]
